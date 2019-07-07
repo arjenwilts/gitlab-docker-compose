@@ -75,7 +75,7 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 ```
 
 ### 9. Create a project
-Now navigate back to the home screen(http://localhost) and create a project bij clicking "New Project" (pick a name yourself :).
+Now navigate back to the home screen(http://localhost) and create a project bij clicking "New Project" (pick a name yourself :) )
 
 ### 10. Initalize your created repository
 Initialze your created project using GIT by cloning it locally. These steps are shown in the page after you created a project and contain some lines like:
