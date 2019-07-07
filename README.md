@@ -52,10 +52,10 @@ Open a terminal window and enter the gitlab runner docker container:
 
 ```docker exec -it git_gitlab-runner_1 -it bash```
 
-In the gitlab runner container, execute the following script and repalce the REGISTRATION_TOKEN with the copied token:
+In the gitlab runner container, execute the following script and replace the REGISTRATION_TOKEN with the copied token:
 
 ```
-export REGISTRATION_TOKEN="<your gitlab_runner token"
+export REGISTRATION_TOKEN="<your gitlab_runner token>"
 export URL="http://localhost/"
 
 gitlab-runner register -n \
@@ -68,5 +68,10 @@ gitlab-runner register -n \
   --docker-network-mode "host"
   ```
 
-  
+You should get a message like:
+```
+Registering runner... succeeded                     runner=rgcnHnHx
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+```
+
 
