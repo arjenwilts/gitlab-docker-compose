@@ -21,7 +21,7 @@ This will create a copy of this github project on your laptop
 ### 3. Docker-compose 
 Locate the docker-compose file and have a look at it using a terminal window or code editor.
 
-### 4. Using docker-conmpose
+### 4. Using docker-compose
 In a terminal window, navigate to the project directory where the docker-compose.yml file is located and execute:
 
 `docker compose up -d`
@@ -42,3 +42,7 @@ In advance, login:
 username: root
 password: The password you just created 
 ```
+
+#### GitLab runners
+Locate the ![alt text](./ringsleutel.png "logo")
+
