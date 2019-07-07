@@ -1,3 +1,2 @@
-##
-Using GitLab and GitLab ci/cd to build an image
+## Using GitLab and GitLab ci/cd to build an image
 
