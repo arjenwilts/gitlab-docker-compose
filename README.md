@@ -1,4 +1,4 @@
-## Using Docker and Docker-compose to run GitLab and GitLab CI/CD
+## Introduction to Docker, Docker-compose, GitLab and GitLab CI/CD
 
 ### 1. Prerequisites
 Install these packages locally:
@@ -24,4 +24,21 @@ Locate the docker-compose file and have a look at it using a terminal window or 
 ### 4. Using docker-conmpose
 In a terminal window, navigate to the project directory where the docker-compose.yml file is located and execute:
 
-```docker compose up -d```
+`docker compose up -d`
+
+This will run a gitlab instance first. After the gitlab instance is running a gitlab-runner will be launched. A gitlab-runner is a "workhorse" that can run the build jobs we are creating in this lab.
+
+### 5. Wait
+Wait until the GitLab instance is running for approximately 5 minutes.
+
+### 6. GitLab
+Navigate in your browser to http://localhost
+
+First you will be asked to enter a root password twice(8 characters at least)
+
+In advance, login:
+
+```
+username: root
+password: The password you just created 
+```
