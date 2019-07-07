@@ -1,4 +1,4 @@
-## Introduction to Docker, Docker-compose, GitLab and GitLab CI/CD
+## Introduction to Docker, Docker-compose, GitLab and GitLab CI/CD to run a webserver locally
 
 ### 1. Prerequisites
 Install these packages locally:
@@ -73,5 +73,52 @@ You should get a message like:
 Registering runner... succeeded                     runner=rgcnHnHx
 Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
 ```
+
+### 9. Create a project
+Now navigate back to the home screen(http://localhost) and create a project bij clicking "New Project" (pick a name yourself :).
+
+### 10. Initalize your created repository
+Initialze your created project using GIT by cloning it locally. These steps are shown in the page after you created a project and contain some lines like:
+
+```
+Create a new repository
+git clone http://localhost/root/test.git
+cd test
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+```
+
+### 11. Gilab-ci
+Locate the .gitlab-ci.yml and Dockerfile files from this project and copy those to your local cloned git repository from previous step. After copying perform a git push to your project:
+
+```
+git add .gitlab-ci.yml Dockerfile
+git commit -m "ci pipeline" 
+git push
+```
+
+### 12. Pipelines  
+Navigate to CI/CD --> Pipelines in your project. A pipeline job will run with two stages: build_image and push_image.
+
+### 13. Registry
+In the previous step, a image is build and pushed to the gitlab registry. 
+Now navigate to registry in the left column and click the `>` sign. You will see a image with the tag "latest" here. Click on the copy sign.
+
+![alt text](./docker-image.png "logo")
+
+### 14. Running the image
+Now run the created image locally!
+Open a terminal window and execute the following command:
+
+```docker run -d -p 8080:80 localhost:4567/root/test:latest```
+
+Next, navigate to http://localhost:8080 and you will see a the home screen of a running nginx webserver instance!
+
+
+
+
+
 
 
