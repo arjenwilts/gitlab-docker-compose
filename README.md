@@ -43,6 +43,30 @@ username: root
 password: The password you just created 
 ```
 
-#### GitLab runners
-Locate the ![alt text](./ringsleutel.png "logo")
+### 7. GitLab runners
+Locate the ![alt text](./ringsleutel.png "logo") logo, to navigate to the admin area.
+In the admin area, navigate to Overview --> Runners and copy the registration token.
+
+### 8. Register the GitLab runner
+Open a terminal window and enter the gitlab runner docker container:
+
+```docker exec -it git_gitlab-runner_1 -it bash```
+
+In the gitlab runner container, execute the following script and repalce the REGISTRATION_TOKEN with the copied token:
+
+```
+export REGISTRATION_TOKEN="<your gitlab_runner token"
+export URL="http://localhost/"
+
+gitlab-runner register -n \
+  --url $URL \
+  --registration-token $REGISTRATION_TOKEN \
+  --executor docker \
+  --description "My Docker Runner" \
+  --docker-image "docker:latest" \
+  --docker-volumes /var/run/docker.sock:/var/run/docker.sock \
+  --docker-network-mode "host"
+  ```
+
+  
 
