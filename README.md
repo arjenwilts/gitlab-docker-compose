@@ -24,7 +24,7 @@ Locate the docker-compose file and have a look at it using a terminal window or 
 ### 4. Using docker-compose
 In a terminal window, navigate to the project directory where the docker-compose.yml file is located and execute:
 
-`docker compose up -d`
+`docker-compose up -d`
 
 This will run a gitlab instance first. After the gitlab instance is running a gitlab-runner will be launched. A gitlab-runner is a "workhorse" that can run the build jobs we are creating in this lab.
 
