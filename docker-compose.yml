@@ -17,10 +17,10 @@ services:
         - '443:443'
         - '2222:22'
         - '4567:4567'
-      volumes:
-        - './runtime/gitlab/etc/gitlab:/etc/gitlab'
-        - './runtime/var/log/gitlab:/var/log/gitlab'
-        - './runtime/var/opt/gitlab:/var/opt/gitlab'
+#       volumes:
+#         - './runtime/gitlab/etc/gitlab:/etc/gitlab'
+#         - './runtime/var/log/gitlab:/var/log/gitlab'
+#         - './runtime/var/opt/gitlab:/var/opt/gitlab'
 
     gitlab-runner:
       depends_on:
