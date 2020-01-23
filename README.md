@@ -50,7 +50,7 @@ In the admin area, navigate to Overview --> Runners and copy the registration to
 ### 8. Register the GitLab runner
 Open a terminal window and enter the gitlab runner docker container:
 
-```docker exec -it git_gitlab-runner_1 -it bash```
+```docker exec -it git_gitlab-runner_1 bash```
 
 In the gitlab runner container, execute the following script and replace the REGISTRATION_TOKEN with the copied token:
 
