@@ -13,7 +13,8 @@ services:
 
         # Add any other gitlab.rb configuration here, each on its own line
       ports:
-        - '80:80'
+        # port 80 is in most cases a system reserved port
+        - '8080:80'
         - '443:443'
         - '2222:22'
         - '4567:4567'
